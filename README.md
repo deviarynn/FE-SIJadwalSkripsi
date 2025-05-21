@@ -17,3 +17,13 @@ php artisan serve
 4. Buat seluruh tampilan view, termasuk folder mahasiswa, ruangan, dll untuk mempermudah pengerjaan krn sudah jadi satu file.
 5. Buat halaman index, create dan edit di semua folder tadi
 6. Buat Controller
+
+
+### Di Routes/web.php
+```php
+Route::get('/', function () {
+    return view('dashboard');
+});
+Route::resource('mahasiswa', MahasiswaController::class);
+Route::resource('ruangan', RuanganController::class);
+```
