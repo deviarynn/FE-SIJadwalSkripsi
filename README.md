@@ -1,3 +1,3 @@
 # SI JADWAL SIDANG SKRIPSI
 
-Latihan untuk persiapan uas pbf sebagai referensi modul
+Latihan laravel restfull API untuk persiapan uas pbf sebagai referensi modul
