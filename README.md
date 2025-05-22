@@ -1,4 +1,4 @@
-# SI JADWAL SIDANG SKRIPSI
+# SI JADWAL SIDANG SKRIPSI KEL 2
 
 Latihan laravel fetch API untuk persiapan uas pbf sebagai referensi modul
 
@@ -20,6 +20,8 @@ Test apakah API endpoint backend sudah berjalan di Postman
 ```GET
 GET → http://localhost:8080/mahasiswa
 ```
+### Download database
+https://github.com/mayangm09/DBE-SI-Penjadwalan-Skripsi.git
 
 ### Buat Laravel
 Langkah:
