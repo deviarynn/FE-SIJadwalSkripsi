@@ -37,6 +37,7 @@ php artisan serve
 ```php
 APP_NAME=Laravel
 APP_URL=http://localhost
+SESSION_DRIVER=file
 ```
 
 3. Buat folder layouts/app.blade.php di view.
