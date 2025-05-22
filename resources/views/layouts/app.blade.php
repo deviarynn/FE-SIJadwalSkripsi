@@ -57,6 +57,13 @@
                     </li>
 
                     <li class="mb-2">
+                        <a href="{{ route('dosen.index') }}" class="flex items-center p-3 rounded-md hover:bg-gray-700 transition duration-200 ease-in-out {{ Request::is('dosen*') ? 'bg-gray-700' : '' }}">
+                            <svg class="w-5 h-5 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2z"></path></svg>
+                            Dosen
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
                         <a href="{{ route('mahasiswa.index') }}" class="flex items-center p-3 rounded-md hover:bg-gray-700 transition duration-200 ease-in-out {{ Request::is('mahasiswa*') ? 'bg-gray-700' : '' }}">
                             <svg class="w-5 h-5 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2z"></path></svg>
                             Mahasiswa

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\RuanganController;
 
@@ -21,6 +22,7 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::resource('dosen', DosenController::class);
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::resource('ruangan', RuanganController::class);
 
