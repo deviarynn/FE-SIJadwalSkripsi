@@ -2,8 +2,13 @@
 
 Latihan laravel fetch API untuk persiapan uas pbf sebagai referensi modul
 
+### Clone repository backend
+```terminal
+git clone https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git
+```
+### Buat Laravel
 Langkah:
-1. Buat file project laravel dgn perintah 
+Buat file project laravel dgn perintah 
 ```bash
 composer create-project laravel/laravel namaprojek
 ```
