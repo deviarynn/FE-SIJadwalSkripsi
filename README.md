@@ -200,7 +200,7 @@ ndex')->with('error', 'Tidak dapat terhubung ke API: ' . $e->getMessage());
 
 ```
 ## NOTED:
-Di RuanganController, function update bagian validasi kode ruangan dihapus
+Di RuanganController CI milik backend, function update bagian validasi kode ruangan dihapus
 ```php
 'kode_ruangan' => [
             'rules' => 'required|alpha_numeric_punct|min_length[3]|is_unique[ruangan.kode_ruangan,kode_ruangan,' . $kode_ruangan . ']',
