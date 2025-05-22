@@ -45,7 +45,7 @@
                     <table class="min-w-full bg-white border border-blue-300 rounded-lg">
                         <thead>
                             <tr class="bg-blue-800 text-white uppercase text-sm leading-normal">
-                                <th class="py-3 px-6 text-left">NPM</th>
+                                <th class="py-3 px-6 text-left ">NPM</th>
                                 <th class="py-3 px-6 text-left">Nama Mahasiswa</th>
                                 <th class="py-3 px-6 text-left">Program Studi</th>
                                 <th class="py-3 px-6 text-left">Judul Skripsi</th>
