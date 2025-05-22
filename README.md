@@ -463,3 +463,9 @@ b. ruangan/edit.blade.php
 </div>
 @endsection
 ```
+✅ Status CRUD Kedua Tabel
+Fitur	Status
+Tampilkan	✅
+Tambah	✅
+Edit	✅
+Hapus	✅
