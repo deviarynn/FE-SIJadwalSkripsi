@@ -8,7 +8,8 @@ git clone https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git
 ```
 
 Masuk ke folder BE-Jadwal-Skripsi
-```cd BE-Jadwal-Skripsi
+```
+cd BE-Jadwal-Skripsi
 ```
 
 Nyalakan server backend
