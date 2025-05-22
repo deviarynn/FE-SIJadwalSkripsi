@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\User; // Pastikan model User ada
+use App\Models\dataMahasiswa; 
+use Illuminate\Support\Facades\Log; // Untuk logging error
+
+use Barryvdh\DomPDF\Facade\Pdf; // tambahkan di atas
 
 class MahasiswaController extends Controller
 {
@@ -178,6 +183,23 @@ class MahasiswaController extends Controller
         } catch (\Exception $e) {
             return redirect()->back()->withInput()->withErrors(['connection_error' => 'Tidak dapat terhubung ke API: ' . $e->getMessage()]);
         }
+    }
+
+    public function unduhMahasiswa($npm)
+    {
+        // 1. Ambil detail mahasiswa dari database lokal Anda berdasarkan $kode_mahasiswa
+        $unduhMahasiswa = dataMahasiswa::where('npm', $npm)->first();
+
+        // Jika mahasiswa tidak ditemukan, kembalikan error
+        if (!$unduhMahasiswa) {
+            return back()->with('error', 'mahasiswa dengan NPM ' . $npm . ' tidak ditemukan.');
+        }
+
+        // 2. Buat view untuk PDF. Contoh: resources/views/pdfs/detail_mahasiswa.blade.php
+        $pdf = PDF::loadView('mahasiswa.cetak', compact('unduhMahasiswa'));
+
+        // 3. Kembalikan PDF sebagai unduhan
+        return $pdf->download('mahasiswa.cetak_' . $npm . '.pdf');
     }
 
     /**

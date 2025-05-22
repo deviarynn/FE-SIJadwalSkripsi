@@ -26,5 +26,6 @@ Route::resource('dosen', DosenController::class);
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::resource('ruangan', RuanganController::class);
 
+Route::get('/mahasiswa/{npm}/unduh', [MahasiswaController::class, 'unduhMahasiswa'])->name('mahasiswa.cetak');
 
 
