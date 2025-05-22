@@ -463,6 +463,34 @@ b. ruangan/edit.blade.php
 </div>
 @endsection
 ```
+
+## ! Catatan penting lagi:
+{ Pastikan saat edit atau inpu data baru, isi datanya sesuaikan dengan ketentuan }
+Contoh: FE
+```php
+{
+        // Validasi input dari form
+        $request->validate([
+            'nidn' => 'required|string|min:10',
+            'nama_dosen' => 'required|string|max:50',
+            'program_studi' => 'required|string',
+            'email' => 'required|email|max:30',
+        ]);
+
+dan BE
+ public function create()
+    {
+        $rules = $this->validate([
+            'nidn' => [
+                'rules' => 'required|numeric|min_length[10]|is_unique[dosen.nidn]',
+                'errors' => [
+                    'required'    => 'NIDN wajib diisi.',
+                    'numeric'     => 'NIDN harus berupa angka.',
+                    'min_length'  => 'NIDN minimal 10 karakter.',
+                    'is_unique'   => 'NIDN sudah terdaftar.',
+                ]
+            ],
+```
 ### ✅ Status CRUD Kedua Tabel
 Fitur	     Status
 Tampilkan     ✅
