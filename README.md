@@ -32,10 +32,13 @@ Route::get('/', function () {
 });
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::resource('ruangan', RuanganController::class);
+Route::resource('dosen', DosenController::class);
+
 ```
 
 ### Generate Controller
 ```php
+php artisan make:controller DosenController
 php artisan make:controller MahasiswaController
 php artisan make:controller RuanganController
 ```
