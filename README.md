@@ -6,6 +6,21 @@ Latihan laravel fetch API untuk persiapan uas pbf sebagai referensi modul
 ```terminal
 git clone https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git
 ```
+
+Masuk ke folder BE-Jadwal-Skripsi
+```cd BE-Jadwal-Skripsi
+```
+
+Nyalakan server backend
+```bash
+php spark serve
+```
+
+Test apakah API endpoint backend sudah berjalan di Postman
+```GET
+GET → http://localhost:8080/mahasiswa
+```
+
 ### Buat Laravel
 Langkah:
 Buat file project laravel dgn perintah 
