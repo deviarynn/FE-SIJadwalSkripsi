@@ -24,7 +24,7 @@
 </head>
 <body class="bg-gray-200 overflow-x-hidden font-sans">
 
-    <nav class="bg-blue-500 shadow-md p-4 flex justify-between items-center fixed w-full z-20 top-0">
+    <nav class="bg-blue-700 shadow-md p-4 flex justify-between items-center fixed w-full z-20 top-0">
         <div class="flex items-center">
             <button id="sidebarToggle" class="text-white focus:outline-none mr-4 lg:hidden">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -41,7 +41,7 @@
 
     <div class="flex pt-16">
 
-        <aside id="sidebar" class="sidebar w-64 bg-blue-700 text-white fixed h-screen p-4 z-10 lg:translate-x-0">
+        <aside id="sidebar" class="sidebar w-64 bg-gray-900 text-white fixed h-screen p-4 z-10 lg:translate-x-0">
             <div class="text-2xl font-semibold mb-6 text-center">Menu</div>
             <nav>
                 <ul>
@@ -66,7 +66,49 @@
                 </ul>
             </nav>
         </aside>
+@extends('layouts.app')
 
+@section('title', 'Dashboard Skripsi')
+
+@section('content')
+<h1 class="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
+<p class="text-gray-700 mb-8">Selamat datang di halaman dashboard skripsi Anda. Di sini Anda dapat mengelola data mahasiswa, dan ruangan.</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{-- Card untuk Jumlah Dosen --}}
+    {{-- <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in">
+        <h2 class="text-xl font-semibold text-blue-700 mb-4">Jumlah Dosen</h2>
+        <p class="text-4xl font-bold text-blue-600">50</p>
+        <p class="text-gray-600 mt-2">Dosen aktif yang terdaftar.</p>
+    </div> --}}
+
+    {{-- Card untuk Jumlah Mahasiswa --}}
+    <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in delay-100">
+        <h2 class="text-xl font-semibold text-blue-700 mb-4">Jumlah Mahasiswa</h2>
+        <p class="text-4xl font-bold text-blue-600">200</p>
+        <p class="text-gray-600 mt-2">Total mahasiswa terdaftar.</p>
+    </div>
+
+    {{-- Card untuk Informasi Ruangan --}}
+    <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in delay-200">
+        <h2 class="text-xl font-semibold text-blue-700 mb-4">Informasi Ruangan</h2>
+        <p class="text-lg text-gray-700">Ruangan Tersedia: <span class="font-bold">15</span></p>
+        <p class="text-lg text-gray-700">Ruangan Digunakan: <span class="font-bold">5</span></p>
+        <p class="text-gray-600 mt-2">Status ketersediaan ruangan saat ini.</p>
+    </div>
+
+    {{-- Anda bisa menambahkan lebih banyak card atau widget di sini --}}
+    {{-- Contoh Card Tambahan (opsional) --}}
+    <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in delay-300 col-span-1 md:col-span-2 lg:col-span-3">
+        <h2 class="text-xl font-semibold text-blue-700 mb-4">Pengumuman Terbaru</h2>
+        <ul class="list-disc list-inside text-gray-700">
+            <li class="mb-2">Perubahan jadwal maintenance sistem pada tanggal 25 Mei 2025.</li>
+            <li class="mb-2">Pendaftaran sidang skripsi periode Juli akan dibuka minggu depan.</li>
+            <li>Workshop penulisan ilmiah akan diadakan pada 10 Juni 2025.</li>
+        </ul>
+    </div>
+</div>
+@endsection
         <main id="contentArea" class="content-area flex-1 ml-64 p-8">
             @yield('content')
         </main>
